@@ -6,7 +6,7 @@ const hydrationData = [
   },
   {
     "userID": 2,
-    "date": "2019/06/15",
+    "date": "2019/06/15", 
     "numOunces": 75
   },
   {
@@ -25000,3 +25000,7 @@ const hydrationData = [
     "numOunces": 87
   }
 ];
+
+if (typeof module !== 'undefined') {
+  module.exports = hydrationData;
+}

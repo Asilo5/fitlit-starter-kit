@@ -1,7 +1,7 @@
 const activityData = [
   {
     "userID": 1,
-    "date": "2019/06/15",
+    "date": "2019/06/15", 
     "numSteps": 3577,
     "minutesActive": 140,
     "flightsOfStairs": 16
@@ -35000,3 +35000,7 @@ const activityData = [
     "flightsOfStairs": 14
   }
 ];
+
+if (typeof module !== 'undefined') {
+  module.exports = activityData;
+}
