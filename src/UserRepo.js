@@ -5,7 +5,7 @@ class UserRepo {
 
   returnUserID(id) {
     return this.user.find((user) => user.id === id) 
-  };
+  }
 
   returnAvgStepGoal() {
     let stepGoal = this.user.map((currUser) => currUser.dailyStepGoal )
@@ -19,5 +19,5 @@ class UserRepo {
 
 if (typeof module !== 'undefined') {
   module.exports = UserRepo;
-};
+}
 
