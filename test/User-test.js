@@ -6,7 +6,8 @@ const User = require('../src/User');
 
 
 describe('User', () => {
-  
+  let user;
+
   beforeEach( () => {
     user = new User(mockUser[0]);
   });
