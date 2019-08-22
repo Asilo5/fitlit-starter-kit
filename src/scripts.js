@@ -1,4 +1,3 @@
-console.log("Hello World");
 
 let userRepo = new UserRepo(userData);
 let randomUser = Math.round(Math.random() * (50 - 1) + 1);

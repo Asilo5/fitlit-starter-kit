@@ -1,12 +1,6 @@
 class User {
-  constructor(user) {
-    this.id = user.id;
-    this.name = user.name;
-    this.address = user.address;
-    this.email = user.email;
-    this.strideLength = user.strideLength;
-    this.dailyStepGoals = user.dailyStepGoals;
-    this.friends = user.friends; 
+  constructor( {id, name, address, email, strideLength, dailyStepGoals, friends} ) {
+    Object.assign( this, {id, name, address, email, strideLength, dailyStepGoals, friends} )
   }
 
   returnFirstName() {
