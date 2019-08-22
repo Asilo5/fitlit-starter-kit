@@ -1,6 +1,6 @@
 class User {
-  constructor( {id, name, address, email, strideLength, dailyStepGoals, friends} ) {
-    Object.assign( this, {id, name, address, email, strideLength, dailyStepGoals, friends} )
+  constructor( user) {
+    Object.assign( this, user );
   }
 
   returnFirstName() {
