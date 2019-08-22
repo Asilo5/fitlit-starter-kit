@@ -23,7 +23,7 @@ class Hydration {
   }
 
   fluidOzWeekly(id) {
-    return this.userId(id).map((user) => user.numOunces);
+    return this.userId(id).map((user) => user.numOunces).slice(0, 7);
   }
   
 }
