@@ -32,16 +32,16 @@ describe('Activity', () => {
     expect(activity.avgMinsActiveWeekly(2)).to.equal(156);
   })
 
-  it.only('should evaluate if step was reached on a specific day', () => {
+  it('should evaluate if step was reached on a specific day', () => {
     expect(activity.stepGoalOnDay(2, "2019/06/15", 5000)).to.equal(false);
   })
 
   it('should return all the days the user exceeded their step goals', () => {
-    expect(activity.exceededStepGoal()).to.deep.equal( ["2019/06/17", "2019/06/19", "2019/06/20", "2019/06/21"] )
+    expect(activity.exceededStepGoal(2, 5000)).to.deep.equal( ["2019/06/17", "2019/06/19", "2019/06/20", "2019/06/21"] )
   })
 
   it('should return the highest num of stairs climbed', () => {
-    expect(activity.allTimeClimbingRecord()).to.equal(44)
+    expect(activity.allTimeClimbingRecord(2)).to.equal(44)
   })
 
   it('should return the avg stairs climbed from all users on a specific day', () => {
@@ -49,6 +49,10 @@ describe('Activity', () => {
   })
 
   it('should return the avg number of steps taken from all users on a specific day', () => {
-    expect(activity.minsActiveOnDay(("2019/06/20")).to.equal(114));
+    expect(activity.avgStepsTakenOnDay("2019/06/20")).to.equal(9333)
+  })
+
+  it('should return the avg minutes active from all users on a specific day', () => {
+    expect(activity.avgMinsActiveOnDay("2019/06/20")).to.equal(114)
   })
 })
