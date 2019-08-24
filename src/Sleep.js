@@ -34,13 +34,19 @@ class Sleep {
   qualitySleptOnDay(id, date) {
     return this.findUser(id).find((user) => user.date === date).sleepQuality;
   }
+
+  findIndexOfData(weekDate) {
+    return this.sleepData.findIndex((data) => data.date === weekDate);
+  }
  
-  hoursSleptWeekly(id) {
-    return this.findUser(id).map((user) => user.hoursSlept).slice(-7);
+  hoursSleptWeekly(id, weekDate) {
+    return this.findUser(id).slice(this.findIndexOfData(weekDate) - 2, this.findIndexOfData(weekDate) + 6)
+      .map((user) => user.hoursSlept);
   }
 
-  qualitySleptWeekly(id) {
-    return this.findUser(id).map((user) => user.sleepQuality).slice(-7);
+  qualitySleptWeekly(id, weekDate) {
+    return this.findUser(id).slice(this.findIndexOfData(weekDate) - 2, this.findIndexOfData(weekDate) + 6)
+      .map((user) => user.sleepQuality);
   }
 
   avgSleepQualityAllUsers() {
@@ -52,8 +58,16 @@ class Sleep {
     return Math.floor(sleepQualityList / this.sleepData.length);
   }
 
-  qualitySleptAboveThreeWeekly() {
+  qualitySleptAboveThreeWeekly(weekDate) {
+    let findSleepQuality = this.sleepData.slice(this.findIndexOfData(weekDate), this.findIndexOfData(weekDate) + 18)
+      .filter((data) => data.sleepQuality > 3);
+  
+    let averageQuality = findSleepQuality.reduce((totalQuality, quality) => {
+      totalQuality += quality.sleepQuality;
+      return totalQuality;
+    }, 0) / findSleepQuality.length;
 
+    return Number(averageQuality.toFixed(1));
   }
   
   mostSleptHoursPerDay(date) {
