@@ -1,11 +1,12 @@
 class User {
-  constructor( user) {
+  constructor(user) {
     Object.assign( this, user );
   }
 
   returnFirstName() {
     return this.name.split(' ')[0];
   }
+
 }
 
 if (typeof module !== 'undefined') {

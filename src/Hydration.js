@@ -8,7 +8,6 @@ class Hydration {
   }
   
   avgFluidOzPerDayAllTimes(id) {
-      
     let result = this.userId(id).reduce((acc, currElement) => {
       acc += currElement.numOunces
       return acc;
@@ -18,8 +17,9 @@ class Hydration {
  
   }
 
-  dayFluidOz(date) {
-    return this.hydroData.find((data) => data.date === date).numOunces;
+  dayFluidOz(id, date) {
+    const datesForId = this.userId(id)
+    return datesForId.find((data) => data.date === date).numOunces;
   }
 
   fluidOzWeekly(id) {
