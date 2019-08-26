@@ -21,7 +21,7 @@ describe('Hydration', () => {
   })
 
   it('should return fluid ounces from specific day', () => {
-    expect(hydration.dayFluidOz("2019/06/16")).to.equal(69);
+    expect(hydration.dayFluidOz(1, "2019/06/16")).to.equal(69);
   })
 
   it('should return the amount of fluid ounces for each day in a week', () => {
