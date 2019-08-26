@@ -44,15 +44,10 @@ describe('Activity', () => {
     expect(activity.allTimeClimbingRecord(2)).to.equal(44)
   })
 
-  it('should return the avg stairs climbed from all users on a specific day', () => {
-    expect(activity.avgNumOfStairsClimbedOnDay("2019/06/20")).to.equal(22)
+  it('should return the avg record of key', () => {
+    expect(activity.avgNumOfKey("2019/06/20", "flightsOfStairs")).to.equal(22)
+    expect(activity.avgNumOfKey("2019/06/20", "numSteps")).to.equal(9333)
+    expect(activity.avgNumOfKey("2019/06/20", "minutesActive")).to.equal(114)
   })
-
-  it('should return the avg number of steps taken from all users on a specific day', () => {
-    expect(activity.avgStepsTakenOnDay("2019/06/20")).to.equal(9333)
-  })
-
-  it('should return the avg minutes active from all users on a specific day', () => {
-    expect(activity.avgMinsActiveOnDay("2019/06/20")).to.equal(114)
-  })
+  
 })

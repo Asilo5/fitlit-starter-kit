@@ -17,7 +17,6 @@ $('.day-water-consumption').html(hydration.dayFluidOz(user.id, "2019/06/17") )
 
 
 hydration.fluidOzWeekly(user.id).forEach((ounce) => {
-  console.log(ounce);
   $('.daily-water-per-week').append(`<p> ${ounce} </p>`);
 });
 

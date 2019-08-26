@@ -7,10 +7,15 @@ class Activity {
     return this.activityData.filter(val => val.userID === id); 
   }
 
+  specificDays(date) {
+    return this.activityData.filter((val) => val.date === date)
+  }
+
   milesWalkedOnDay(id, date, strideLength) {
     let specificDate = this.userId(id).find((data) => data.date === date);
     let result =  (specificDate.numSteps * (strideLength / 2) ) / 5280;
-    return parseFloat(result.toString().slice(0, 3));
+    return Number(result.toFixed(1));
+    // return parseFloat(result.toString().slice(0, 3));
   }
 
   minsActiveOnDay(id, date) {
@@ -18,71 +23,71 @@ class Activity {
   }
 
   avgMinsActiveWeekly(id) {
-    let days = this.userId(id);
-    let result = days.map((day) => day.minutesActive);
-    let weekDays = result.slice(0,7);
-    let resultReduce = weekDays.reduce((acc, currMins) => {
+    let days = this.userId(id).map((day) => day.minutesActive).slice(0, 7);
+    let result = days.reduce((acc, currMins) => {
       acc += currMins;
       return acc;
     }, 0); 
-    return Math.floor(resultReduce / weekDays.length)
+    return Math.floor(result / days.length)
   }
 
   stepGoalOnDay(id, date, dailyStepGoal) {
-    let user = this.userId(id);
-    let specificDate = user.find((data) => data.date === date);
-    if (specificDate.numSteps >= dailyStepGoal) {
-      return true;
-    } else {
-      return false
-    }
+    let specificUser = this.userId(id).find((data) => data.date === date);
+    return specificUser.numSteps >= dailyStepGoal ? true : false;
   }
 
   exceededStepGoal(id, dailyStepGoal) {
-    let user = this.userId(id);
-    let daysGoalMet = user.filter((val) => val.numSteps >= dailyStepGoal); 
-    let reduced = daysGoalMet.reduce((acc, currDate) => {
+    let specificUser = this.userId(id).filter((val) => val.numSteps >= dailyStepGoal);
+    let result = specificUser.reduce((acc, currDate) => {
       acc.push(currDate.date)
       return acc;
     }, []);
-    return reduced;
+    return result;
   }
 
   allTimeClimbingRecord(id) {
-    let user = this.userId(id); 
-    let stairs = user.map((val) =>  val.flightsOfStairs).sort((a, b) => a - b);
-    let highestNum = stairs.pop();
-    return highestNum;
+    let specificUser = this.userId(id); 
+    let stairs = specificUser.map((val) =>  val.flightsOfStairs);
+    let orderedNums = stairs.sort((a, b) => a - b);
+    return orderedNums.pop();
   }
 
-  avgNumOfStairsClimbedOnDay(date) {
-    let day = this.activityData.filter((val) => val.date === date)
-    let reduced = day.reduce((acc, currDay) => {
-      acc += currDay.flightsOfStairs
+  avgNumOfKey(date, key) {
+    let days = this.specificDays(date);
+    let avgRecord = days.reduce((acc, currVal) => {
+      acc += currVal[key]
       return acc;
     }, 0);
-    return Math.floor(reduced / day.length)
+    return Math.floor(avgRecord / days.length)
   }
-  
-  avgStepsTakenOnDay(date) {
-    let day = this.activityData.filter((val) => val.date === date)
-    let reduced = day.reduce((acc, currDay) => {
-      acc += currDay.numSteps
-      return acc;
-    }, 0);
 
-    return Math.floor(reduced / day.length);
-  }
+  // avgNumOfStairsClimbedOnDay(date) {
+  //   let days = this.specificDays(date);
+  //   let avgRecord = days.reduce((acc, currDay) => {
+  //     acc += currDay.flightsOfStairs
+  //     return acc;
+  //   }, 0);
+  //   return Math.floor(avgRecord / days.length)
+  // }
   
-  avgMinsActiveOnDay(date) {
-    let day = this.activityData.filter((val) => val.date === date)
-    let reduced = day.reduce((acc, currDay) => {
-      acc += currDay.minutesActive
-      return acc;
-    }, 0);
+  // avgStepsTakenOnDay(date) {
+  //   let days = this.specificDays(date);
+  //   let avgSteps = days.reduce((acc, currDay) => {
+  //     acc += currDay.numSteps
+  //     return acc;
+  //   }, 0);
+  //   return Math.floor(avgSteps / days.length);
+  // }
+  
+  // avgMinsActiveOnDay(date) {
+  //   let days = this.specificDays(date);
+  //   let avgMinutes = days.reduce((acc, currMins) => {
+  //     acc += currMins.minutesActive
+  //     return acc;
+  //   }, 0);
     
-    return  Math.floor(reduced / day.length);
-  }
+  //   return  Math.floor(avgMinutes / days.length);
+  // }
   
   // eiffelTowerChallenge() {
   //   // iteration 5 
