@@ -11,8 +11,7 @@ class UserRepo {
   getRandomUser() {
     const randomIndex = Math.round(Math.random() * (this.users.length - 1) + 1)
     this.randomUser = this.users[randomIndex];
-    return this.returnUserID(randomIndex)
-
+    return this.returnUserID(randomIndex);
   }
 
   returnAvgStepGoal() {
