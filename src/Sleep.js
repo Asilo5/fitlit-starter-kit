@@ -1,4 +1,4 @@
-const mockUserData = require('../data/mock-user')
+// const userData = require('../data/users');
 
 class Sleep {
   constructor(sleepData) {
@@ -70,11 +70,11 @@ class Sleep {
     return Number(averageQuality.toFixed(1));
   }
   
-  mostSleptHoursPerDay(date) {
+  mostSleptHoursPerDay(userData, date) {
     let highestSleeper = this.sleepData.filter((hrSleep) => hrSleep.date === date)
       .sort((a, b) => b.hoursSlept - a.hoursSlept)[0];
 
-    return mockUserData.find((user) => user.id === highestSleeper.userID).name;
+    return userData.find((user) => user.id === highestSleeper.userID).name;
   }
 
 }

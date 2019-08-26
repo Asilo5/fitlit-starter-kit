@@ -2,6 +2,7 @@ const chai = require('chai');
 const expect = chai.expect;
 
 const mockSleepData = require('../data/mock-sleep');
+const userData =  require('../data/users');
 const Sleep = require('../src/Sleep');
 
 describe('Sleep', () => {
@@ -49,7 +50,7 @@ describe('Sleep', () => {
   })
 
   it('should return the users who slept most hours by date', () => {
-    expect(sleep.mostSleptHoursPerDay("2019/06/16")).to.equal('Herminia Witting');
+    expect(sleep.mostSleptHoursPerDay(userData, "2019/06/16")).to.equal('Herminia Witting');
   })
 
 })
