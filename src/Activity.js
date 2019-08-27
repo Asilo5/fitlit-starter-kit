@@ -11,6 +11,19 @@ class Activity {
     return this.activityData.filter((val) => val.date === date)
   }
 
+  findIndexOfData(weekDate) {
+    return this.activityData.findIndex(data => data.date === weekDate);
+  }
+
+  numberOfSteps(id, date) {
+    return this.userId(id).find(val => val.date === date).numSteps
+  }
+
+  // weeklyReview(id, weekDate) {
+  //   console.log(this.findIndexOfData(weekDate));
+  //   console.log(this.userId(id).slice(this.findIndexOfData(weekDate) - 20, this.findIndexOfData(weekDate) + 6));
+  // }
+
   milesWalkedOnDay(id, date, strideLength) {
     let specificDate = this.userId(id).find((data) => data.date === date);
     let result =  (specificDate.numSteps * (strideLength / 2) ) / 5280;
