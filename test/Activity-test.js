@@ -20,7 +20,6 @@ describe('Activity', () => {
   })
 
   it('should return miles walked in a day', () => {
-    // console.log(activity)
     expect(activity.milesWalkedOnDay(2, "2019/06/15", 4.5)).to.equal(1.8);
   })
 
@@ -50,4 +49,7 @@ describe('Activity', () => {
     expect(activity.avgNumOfKey("2019/06/20", "minutesActive")).to.equal(114)
   })
   
+  it('should return the user object for a week', () => {
+    expect(activity.weeklyReview(2, "2019/06/15")).to.eql();
+  })
 })
