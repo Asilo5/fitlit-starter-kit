@@ -3,29 +3,65 @@
   <head>
     <meta charset="UTF-8">
     <title>Activity Tracker</title>
+    <link rel='stylesheet' href='reset.css'>
+    <link rel='stylesheet' href='styles.css'>
+
   </head>
   <body>
-    <h1 aria-label='Title of page'>Bad Bitches YEEE</h1>
-
-    <p>First Name: <span aria-label='first name of user' class='first-name'></span></p>
-    <p>Return id: <span class='id-from-user'></span></p>
-
-    <p>Avg Step Goal of All users: <span aria-label='average step goal for all users' class='avg-users-stepgoal'></span></p>
-    <p>Display how much water consumed today: <span aria-label='How much water was consumed today' class='day-water-consumption'></span></p>
-    <p>How much water consumed each day of the week: <span aria-label='How much water was consumed each day weekly' class='daily-water-per-week'></span></p>
-
-    <p>Latest Day hours slept: <span aria-label='How many hours slept today' class='hours-sleep'></span></p>
-    <p>Latest Day quality sleep: <span aria-label='Quality of sleep today' class='quality-sleep'></span></p>
-    <p>Sleep hours over the course of a week <span aria-label='Average hours of sleep weekly' class='sleep-hrs-weekly'></span></p>
-    <p>Sleep quality over the course of a week <span aria-label='Average quality of sleep weekly' class='sleep-quality-weekly'></span></p>
-    <p>All time average sleep hours for a user: <span aria-label='Average hours of sleep from all time' class='avg-sleep-hours'></span></p>
-    <p>All time average sleep-quality for a user: <span aria-label='Average quality of sleep from all time' class='avg-sleep-qual'></span></p>
-
-    <p>Number of steps for the latest day: <span class="steps-day"></span></p>
-    <p>Number of minutes active in day: <span class="mins-active"></span></p>
-    <p>Miles Walked in a day: <span class="miles-walked"></span></p>
-    <p>Number of steps</p>
-    
+    <header>
+      <h1 aria-label='Title of page'>FitLit</h1>
+    </header>
+    <main class="app">
+      <section class="person-info-container">
+        <h1>Welcome, <span aria-label='first name of user' class='first-name'></span></h1>
+        <p>Stride Length: <span aria-label='the stride length of user' class="stride-length"></span></p>
+        <p>Email Address: <span aria-label='email address of user' class='email-address'></span></p>
+      </section>
+      <div class='right-side-container'>
+        <div class='card-container'>
+          <div class="card-inner"> 
+            <input id='hydration' type='radio' name='tabs' checked>
+            <label for='hydration'>
+              <div class="card-inner-info"> 
+                <h2>Hydration</h2>
+                <div class="details">
+                  <h3>Water consumed today: <span aria-label='How much water was consumed today' class='day-water-consumption'></span></h3>
+                  <h3>Weekly water consumption: <span aria-label='How much water was consumed each day weekly' class='daily-water-per-week'></span></h3>
+                </div>
+              </div>
+            </label>
+         
+            <input id='sleep' type='radio' name='tabs' >
+            <label for='sleep'>
+              <div class="card-inner-info">
+                <h2>Sleep</h2>
+                <div class="details">
+                  <h3>Latest Day hours slept: <span aria-label='How many hours slept today' class='hours-sleep'></span></h3>
+                  <h3>Latest Day quality sleep: <span aria-label='Quality of sleep today' class='quality-sleep'></span></h3>
+                  <h3>Sleep hours over the course of a week <span aria-label='Average hours of sleep weekly' class='sleep-hrs-weekly'></span></h3>
+                  <h3>Sleep quality over the course of a week <span aria-label='Average quality of sleep weekly' class='sleep-quality-weekly'></span></h3>
+                  <h3>All time average sleep hours for a user: <span aria-label='Average hours of sleep from all time' class='avg-sleep-hours'></span></h3>
+                  <h3>All time average sleep-quality for a user: <span aria-label='Average quality of sleep from all time' class='avg-sleep-qual'></span></h3>
+                </div>
+              </div>
+            </label>
+          
+            <input id='activity' type='radio' name='tabs' >
+            <label for='activity'>
+              <div class="card-inner-info">
+                <h2>Activity</h2>
+                <div class="details">
+                  <h3>Avg Step Goal of All users: <span aria-label='average step goal for all users' class='avg-users-stepgoal'></span></h3>
+                  <h3>Number of steps for the latest day: <span class="steps-day"></span></h3>
+                  <h3>Number of minutes active in day: <span class="mins-active"></span></h3>
+                  <h3>Miles Walked in a day: <span class="miles-walked"></span></h3>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="../data/users.js"></script>
