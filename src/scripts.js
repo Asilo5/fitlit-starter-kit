@@ -1,3 +1,8 @@
+// $('main').hide();
+
+// setTimeout(() => {
+//   $('main').show('slow');
+// }, 1000);
 
 let userRepo = new UserRepo(userData);
 let user = new User(userRepo.getRandomUser());
@@ -9,8 +14,6 @@ $('.first-name').html(user.returnFirstName());
 $('.user-address').html(user.address);
 $('.email-address').html(user.email);
 $('.stride-length').html(user.strideLength);
-
-// $('.id-from-user').html(user.id);
 
 $('.day-water-consumption').html(hydration.dayFluidOz(user.id, "2019/06/17") )
 
