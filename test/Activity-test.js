@@ -52,4 +52,8 @@ describe('Activity', () => {
   it('should return the user object for a week', () => {
     expect(activity.weeklyReview(2, "2019/06/15")).to.eql();
   })
+
+  it.only('should return the amount of times the user has climbed up the Eiffel Tower', () => {
+    expect(activity.eiffelTowerChallenge(2, "2019/06/15")).to.equal(3);
+  })
 })
