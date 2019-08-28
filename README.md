@@ -1,6 +1,6 @@
 # FitLit Starter Kit
 
-Fitlit is a fitness tracker for users, the dashboard displays a randomized user. We display the  
+Fitlit is a fitness tracker for users, the dashboard displays a randomized user. 
 
 Authors: 
 
