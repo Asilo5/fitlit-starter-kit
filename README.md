@@ -28,3 +28,5 @@ Chai,
 HTML,
 CSS, 
 ARIA.
+
+![Screenshot](https://github.com/Asilo5/fitlit-starter-kit/blob/master/fitlit.gif)
