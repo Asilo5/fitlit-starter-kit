@@ -1,40 +1,72 @@
 * { box-sizing: border-box }
 
 body {
-  background: #45b98f;
+  /* background: #45b98f; */
   overflow: hidden;
   font-family: sans-serif;
 }
 
 main {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-evenly; */
+  font-family: 'Fjalla One', sans-serif;
 }
 
 h1 {
+  font-family: 'Righteous', cursive;
   text-align: center;
+  font-size: 3em;
+  padding: 15px;
+  background: #7ed6df;
+}
+
+.person-info-container {
+  padding: 20px;
+  width: 40%;
+}
+
+.welcome-text {
+  text-align: center;
+  font-size: 3em;
+}
+
+.person-info-container img {
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+.person-info-container p {
+  margin-bottom: 15px;
 }
 
 h2 {
   position: sticky;
   top: 0;
+  padding: 10px;
+  background: #7ed6df;
+  border-radius: 0 5px 0 0;
 }
 
 .right-side-container {
   position: relative;
-  width: 30%;
+  width: 60%;
   height: 100vh;
 }
+
 .card-container {
-  width: 300px;
+  width: 95%;
   height: 400px;
   position: absolute;
-  left: 0;
-  top: 20%;
-  box-shadow: 5px 5px 0px grey;
+  /* left: 0; */
+  top: 10%;
+  box-shadow: 6px 3px 0px grey;
   border-radius: 5px;
-  overflow: hidden;
-  margin: auto;
+  /* overflow: hidden;
+  margin: auto; */
   animation: intro 0.34s 0.4s cubic-bezier(1, 1.4, 0.41, 1.01) forwards;
   /* transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(10deg); */
 }
@@ -47,10 +79,10 @@ h2 {
   display: none;
 }
 
-.card-inner label {
+/* .card-inner label {
   display: block;
   width: 100%;
-}
+} */
 
 .card-inner 
 input[type='radio']:checked + label
@@ -62,7 +94,7 @@ input[type='radio']:checked + label
 input[type='radio']:not(checked) + label
 .card-inner-info {
   height: 20px;
-  border-left: 12px solid rgba(0, 0, 0, 0.12);
+  border-left: 10px solid rgba(202, 241, 246);
 }
 
 .card-inner-info {
