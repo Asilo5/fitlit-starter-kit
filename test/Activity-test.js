@@ -1,7 +1,6 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-// for tests im using user 2 
 const mockUserData = require('../data/mock-user');
 const mockActivityData = require('../data/mock-activity');
 const Activity = require('../src/Activity');
@@ -9,10 +8,8 @@ const UserRepo = require('../src/UserRepo');
 
 describe('Activity', () => {
   let activity;
-  let app;
   beforeEach(() => {
     activity = new Activity(mockActivityData);
-    app = new UserRepo(mockUserData, activity);
   })
 
   it('should be a function', () => {
@@ -47,10 +44,6 @@ describe('Activity', () => {
     expect(activity.avgNumOfKey("2019/06/20", "flightsOfStairs")).to.equal(22)
     expect(activity.avgNumOfKey("2019/06/20", "numSteps")).to.equal(9333)
     expect(activity.avgNumOfKey("2019/06/20", "minutesActive")).to.equal(114)
-  })
-  
-  it('should return the user object for a week', () => {
-    expect(activity.weeklyReview(2, "2019/06/15")).to.eql();
   })
 
   it('should return the amount of times the user has climbed up the Eiffel Tower', () => {

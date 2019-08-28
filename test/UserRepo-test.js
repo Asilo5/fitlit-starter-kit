@@ -1,12 +1,12 @@
- const chai = require('chai');
- const expect = chai.expect;
+const chai = require('chai');
+const expect = chai.expect;
 
- const mockData = require('../data/mock-user');
- const UserRepo = require('../src/UserRepo');
+const mockData = require('../data/mock-user');
+const UserRepo = require('../src/UserRepo');
 
 
- describe('UserRepo', () => {
-  
+describe('UserRepo', () => {
+  let userRepo;
   beforeEach( () => {
     userRepo = new UserRepo(mockData);
   });
@@ -22,7 +22,6 @@
   it('should return avg step goals of all users', () => {
     expect(userRepo.returnAvgStepGoal()).to.equal(6666)
   });
-
- });
+});
 
  
