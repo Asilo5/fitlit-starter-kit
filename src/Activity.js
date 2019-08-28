@@ -102,11 +102,13 @@ class Activity {
   //   return  Math.floor(avgMinutes / days.length);
   // }
   
-  // eiffelTowerChallenge() {
-  //   // iteration 5 
-  // }
+  eiffelTowerChallenge(id, date) {
+    let stepsDone = this.userId(id).find((day) => day.date === date).numSteps;
+
+    return Math.round(stepsDone / 1710);
+  }
 }
 
 if (typeof module !== 'undefined') {
   module.exports = Activity;
-};
+}

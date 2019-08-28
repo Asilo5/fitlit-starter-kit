@@ -5,17 +5,20 @@
     <title>Activity Tracker</title>
     <link rel='stylesheet' href='reset.css'>
     <link rel='stylesheet' href='styles.css'>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Righteous&display=swap" rel="stylesheet">
 
   </head>
   <body>
     <header>
       <h1 aria-label='Title of page'>FitLit</h1>
     </header>
-    <main class="app">
+    <main>
       <section class="person-info-container">
-        <h1>Welcome, <span aria-label='first name of user' class='first-name'></span></h1>
-        <p>Stride Length: <span aria-label='the stride length of user' class="stride-length"></span></p>
+        <h2 class='welcome-text'>Welcome, <span aria-label='first name of user' class='first-name'></span></h2>
+        <img src='https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' alt='Person running in the middle of nowhere towards mountains full of snow'>
+        <p>Address: <span aria-label='address of user' class="user-address"></span></p>
         <p>Email Address: <span aria-label='email address of user' class='email-address'></span></p>
+        <p>Stride Length: <span aria-label='the stride length of user' class="stride-length"></span></p>
       </section>
       <div class='right-side-container'>
         <div class='card-container'>
@@ -25,8 +28,13 @@
               <div class="card-inner-info"> 
                 <h2>Hydration</h2>
                 <div class="details">
-                  <h3>Water consumed today: <span aria-label='How much water was consumed today' class='day-water-consumption'></span></h3>
-                  <h3>Weekly water consumption: <span aria-label='How much water was consumed each day weekly' class='daily-water-per-week'></span></h3>
+                  <h3>Ounces of water consumed today: </h3>
+                  <div class='align-span-text'> 
+                    <p><span aria-label='How much water was consumed today' class='day-water-consumption user-info'></span></p>
+                    <p>oz</p>
+                  </div>
+                  <h3>Weekly water consumption: </h3>
+                  <p class='user-info-display'><span aria-label='How much water was consumed each day weekly' class='daily-water-per-week'></span></p>
                 </div>
               </div>
             </label>
@@ -36,12 +44,24 @@
               <div class="card-inner-info">
                 <h2>Sleep</h2>
                 <div class="details">
-                  <h3>Latest Day hours slept: <span aria-label='How many hours slept today' class='hours-sleep'></span></h3>
-                  <h3>Latest Day quality sleep: <span aria-label='Quality of sleep today' class='quality-sleep'></span></h3>
-                  <h3>Sleep hours over the course of a week <span aria-label='Average hours of sleep weekly' class='sleep-hrs-weekly'></span></h3>
-                  <h3>Sleep quality over the course of a week <span aria-label='Average quality of sleep weekly' class='sleep-quality-weekly'></span></h3>
-                  <h3>All time average sleep hours for a user: <span aria-label='Average hours of sleep from all time' class='avg-sleep-hours'></span></h3>
-                  <h3>All time average sleep-quality for a user: <span aria-label='Average quality of sleep from all time' class='avg-sleep-qual'></span></h3>
+                  <h3>Hours slept today: </h3>
+                  <div class='align-span-text'> 
+                    <p><span aria-label='How many hours slept today' class='hours-sleep user-info'></span></p>
+                    <p>hrs</p>
+                  </div>
+                  <h3>Quality sleep today: </h3>
+                  <p><span aria-label='Quality of sleep today' class='quality-sleep user-info'></span></p>
+                  <h3>Hours of sleep over a week: </h3>
+                  <p class='user-info-display'><span aria-label='Average hours of sleep weekly' class='sleep-hrs-weekly'></span></p>
+                  <h3>Sleep quality over a week: </h3>
+                  <p class='user-info-display'><span aria-label='Average quality of sleep weekly' class='sleep-quality-weekly'></span></p>
+                  <h3>All time average sleep hours: </h3>
+                  <div class='align-span-text'> 
+                    <p><span aria-label='Average hours of sleep from all time' class='avg-sleep-hours user-info'></span></p>
+                    <p>hrs</p>
+                  </div>
+                  <h3>All time average sleep-quality: </h3>
+                  <p><span aria-label='Average quality of sleep from all time' class='avg-sleep-qual user-info'></span></p>
                 </div>
               </div>
             </label>
@@ -51,10 +71,25 @@
               <div class="card-inner-info">
                 <h2>Activity</h2>
                 <div class="details">
-                  <h3>Avg Step Goal of All users: <span aria-label='average step goal for all users' class='avg-users-stepgoal'></span></h3>
-                  <h3>Number of steps for the latest day: <span class="steps-day"></span></h3>
-                  <h3>Number of minutes active in day: <span class="mins-active"></span></h3>
-                  <h3>Miles Walked in a day: <span class="miles-walked"></span></h3>
+                  <h3>Number of steps today: </h3>
+                  <div class='align-span-text'> 
+                    <p><span class="steps-day user-info"></span> <p>/</p> <span aria-label='average step goal for all users' class='avg-users-stepgoal user-info'></span> avg for all users</p>
+                  </div>
+                  <h3>Number of minutes active today: </h3>
+                  <p><span class="mins-active user-info"></span></p>
+                  <h3>Miles Walked today: </h3>
+                  <p><span class="miles-walked user-info"></span></p>
+                </div>
+              </div>
+            </label>
+
+            <input id='challenge' type='radio' name='tabs' >
+            <label for='challenge'>
+              <div class="card-inner-info">
+                <h2>Challenge</h2>
+                <div class="details">
+                  <h3>You climbed the Eiffel Tower <span class="eiffel-challenge"></span> times today.</h3> 
+                  <img class='eiffel-img' src='https://svgsilh.com/svg/1295732.svg' alt='black and white drawing of the Eiffel Tower'>                 
                 </div>
               </div>
             </label>
