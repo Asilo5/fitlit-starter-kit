@@ -29,8 +29,10 @@
                 <h2>Hydration</h2>
                 <div class="details">
                   <h3>Ounces of water consumed today: </h3>
-                  <p><span aria-label='How much water was consumed today' class='day-water-consumption user-info'></span></p>
-                  <p class='move-oz'>oz</p>
+                  <div class='align-span-text'> 
+                    <p><span aria-label='How much water was consumed today' class='day-water-consumption user-info'></span></p>
+                    <p>oz</p>
+                  </div>
                   <h3>Weekly water consumption: </h3>
                   <p class='user-info-display'><span aria-label='How much water was consumed each day weekly' class='daily-water-per-week'></span></p>
                 </div>
@@ -43,8 +45,10 @@
                 <h2>Sleep</h2>
                 <div class="details">
                   <h3>Hours slept today: </h3>
-                  <p><span aria-label='How many hours slept today' class='hours-sleep user-info'></span></p>
-                  <p>hrs</p>
+                  <div class='align-span-text'> 
+                    <p><span aria-label='How many hours slept today' class='hours-sleep user-info'></span></p>
+                    <p>hrs</p>
+                  </div>
                   <h3>Quality sleep today: </h3>
                   <p><span aria-label='Quality of sleep today' class='quality-sleep user-info'></span></p>
                   <h3>Hours of sleep over a week: </h3>
@@ -52,7 +56,10 @@
                   <h3>Sleep quality over a week: </h3>
                   <p class='user-info-display'><span aria-label='Average quality of sleep weekly' class='sleep-quality-weekly'></span></p>
                   <h3>All time average sleep hours: </h3>
-                  <p><span aria-label='Average hours of sleep from all time' class='avg-sleep-hours user-info'></span></p>
+                  <div class='align-span-text'> 
+                    <p><span aria-label='Average hours of sleep from all time' class='avg-sleep-hours user-info'></span></p>
+                    <p>hrs</p>
+                  </div>
                   <h3>All time average sleep-quality: </h3>
                   <p><span aria-label='Average quality of sleep from all time' class='avg-sleep-qual user-info'></span></p>
                 </div>
@@ -67,11 +74,23 @@
                   <!-- <h3>Avg Step Goal of All users: </h3> -->
                   <!-- <p><span aria-label='average step goal for all users' class='avg-users-stepgoal user-info'></span></p> -->
                   <h3>Number of steps today: </h3>
-                  <p><span class="steps-day user-info"></span> / <span aria-label='average step goal for all users' class='avg-users-stepgoal user-info'></span></p>
+                  <div class='align-span-text'> 
+                    <p><span class="steps-day user-info"></span> <p>/</p> <span aria-label='average step goal for all users' class='avg-users-stepgoal user-info'></span></p>
+                  </div>
                   <h3>Number of minutes active today: </h3>
                   <p><span class="mins-active user-info"></span></p>
                   <h3>Miles Walked today: </h3>
                   <p><span class="miles-walked user-info"></span></p>
+                </div>
+              </div>
+            </label>
+
+            <input id='challenge' type='radio' name='tabs' >
+            <label for='challenge'>
+              <div class="card-inner-info">
+                <h2>Challenge</h2>
+                <div class="details">
+                  <h3>You climbed the Eiffel Tower <span class="eiffel-challenge"></span> times today.</h3>                  
                 </div>
               </div>
             </label>

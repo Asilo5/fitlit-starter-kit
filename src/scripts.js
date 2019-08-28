@@ -77,6 +77,7 @@ sleep.qualitySleptWeekly(user.id, "2019/06/16").forEach((quality) => {
 
 $('.avg-sleep-hours').html(sleep.dailyAvgNumHoursSlept(user.id));
 $('.avg-sleep-qual').html(sleep.avgQualityPerDayAllTime(user.id));
+$('.eiffel-challenge').html(activity.eiffelTowerChallenge(user.id, "2019/06/16"))
 
 // number of steps for the latest day 
 $('.steps-day').html(activity.numberOfSteps(user.id, "2019/06/16"));

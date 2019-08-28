@@ -104,6 +104,7 @@ class Activity {
   
   eiffelTowerChallenge(id, date) {
     let stepsDone = this.userId(id).find((day) => day.date === date).numSteps;
+
     return Math.round(stepsDone / 1710);
   }
 }

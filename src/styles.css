@@ -43,6 +43,7 @@ h1 {
 .person-info-container > p {
   margin-bottom: 15px;
   text-align: center;
+  font-size: 20px;
 }
 
 h2 {
@@ -54,6 +55,12 @@ h2 {
   font-size: 35px;
 }
 
+.align-span-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .right-side-container {
   position: relative;
   width: 60%;
@@ -62,7 +69,7 @@ h2 {
 
 .card-container {
   width: 95%;
-  height: 384px;
+  height: 431px;
   position: absolute;
   /* left: 0; */
   top: 15%;
@@ -104,10 +111,6 @@ input[type='radio']:not(checked) + label
   transition: all 0.65s cubic-bezier(1, 0, 0.41, 1.01);
 }
 
-.card-container label:nth-of-type(1) .card-inner-info {
-  background: #BBDEF8;
-  height: 200px;
-}
 
 th {
   padding: 17.5px;
@@ -135,6 +138,11 @@ h3 {
   margin: 10px auto;
 }
 
+.card-container label:nth-of-type(1) .card-inner-info {
+  background: #BBDEF8;
+  height: 200px;
+}
+
 .card-container label:nth-of-type(2) .card-inner-info {
   background: #7ed6df;
   height: 200px;
@@ -142,6 +150,11 @@ h3 {
 
 .card-container label:nth-of-type(3) .card-inner-info {
   background: rgb(234, 220, 238);
+  height: 200px;
+}
+
+.card-container label:nth-of-type(4) .card-inner-info {
+  background: rgb(234, 199, 243);
   height: 200px;
 }
 
