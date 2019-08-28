@@ -1,8 +1,3 @@
-// $('main').hide();
-
-// setTimeout(() => {
-//   $('main').show('slow');
-// }, 1000);
 
 let userRepo = new UserRepo(userData);
 let user = new User(userRepo.getRandomUser());

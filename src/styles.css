@@ -1,14 +1,12 @@
 * { box-sizing: border-box }
 
 body {
-  /* background: #45b98f; */
   overflow: hidden;
   font-family: sans-serif;
 }
 
 main {
   display: flex;
-  /* justify-content: space-evenly; */
   font-family: 'Fjalla One', sans-serif;
 }
 
@@ -50,7 +48,6 @@ h2 {
   position: sticky;
   top: 0;
   padding: 10px;
-  /* background: rgba(202, 241, 246); */
   border-radius: 0 5px 0 0;
   font-size: 35px;
 }
@@ -69,26 +66,22 @@ h2 {
 
 .card-container {
   width: 95%;
-  height: 431px;
+  height: 434px;
   position: absolute;
-  /* left: 0; */
   top: 15%;
   box-shadow: 6px 4px 0px grey;
   border-radius: 5px;
-  /* overflow: hidden;
-  margin: auto; */
   animation: intro 0.34s 0.4s cubic-bezier(1, 1.4, 0.41, 1.01) forwards;
-  /* transform: translateY(-50%) scale(0) rotateX(10deg) rotateY(10deg) rotateZ(10deg); */
 }
 
 .card-inner input[type='radio'] {
   display: none;
 }
 
-.move-oz {
-  position: relative;
-  right: 23em;
-  bottom: 38px;
+.eiffel-img {
+  height: 10em;
+  margin: auto;
+  display: block;
 }
 
 .card-inner 
@@ -100,7 +93,7 @@ input[type='radio']:checked + label
 .card-inner 
 input[type='radio']:not(checked) + label
 .card-inner-info {
-  height: 47px;
+  height: 48px;
   border-left: 10px solid rgba(0, 0, 0, 0.12);
 }
 
@@ -120,8 +113,18 @@ td {
   padding: 20px;
 }
 
+.sleep-hrs-weekly td {
+  padding: 13px;
+}
+
+.sleep-quality-weekly td {
+  padding: 25px;
+}
+
 h3 {
   text-align: center;
+  font-size: 20px;
+  padding: 10px;
 }
 
 .user-info {
