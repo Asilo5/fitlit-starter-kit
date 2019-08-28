@@ -1,5 +1,3 @@
-// const userData = require('../data/users');
-
 class Sleep {
   constructor(sleepData) {
     this.sleepData = sleepData;

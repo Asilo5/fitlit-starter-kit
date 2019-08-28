@@ -12,9 +12,7 @@ class Hydration {
       acc += currElement.numOunces
       return acc;
     }, 0)
-
     return Math.floor(result / this.userId(id).length)
- 
   }
 
   dayFluidOz(id, date) {
@@ -25,7 +23,6 @@ class Hydration {
   fluidOzWeekly(id) {
     return this.userId(id).map((user) => user.numOunces).slice(0, 7);
   }
-  
 }
 
 if (typeof module !== 'undefined') {
