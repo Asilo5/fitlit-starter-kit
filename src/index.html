@@ -16,8 +16,9 @@
       <section class="person-info-container">
         <h2 class='welcome-text'>Welcome, <span aria-label='first name of user' class='first-name'></span></h2>
         <img src='https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80' alt='Person running in the middle of nowhere towards mountains full of snow'>
-        <p>Stride Length: <span aria-label='the stride length of user' class="stride-length"></span></p>
+        <p>Address: <span aria-label='address of user' class="user-address"></span></p>
         <p>Email Address: <span aria-label='email address of user' class='email-address'></span></p>
+        <p>Stride Length: <span aria-label='the stride length of user' class="stride-length"></span></p>
       </section>
       <div class='right-side-container'>
         <div class='card-container'>
@@ -27,8 +28,11 @@
               <div class="card-inner-info"> 
                 <h2>Hydration</h2>
                 <div class="details">
-                  <h3>Water consumed today: <span aria-label='How much water was consumed today' class='day-water-consumption'></span></h3>
-                  <h3>Weekly water consumption: <span aria-label='How much water was consumed each day weekly' class='daily-water-per-week'></span></h3>
+                  <h3>Ounces of water consumed today: </h3>
+                  <p><span aria-label='How much water was consumed today' class='day-water-consumption user-info'></span></p>
+                  <p class='move-oz'>oz</p>
+                  <h3>Weekly water consumption: </h3>
+                  <p class='user-info-display'><span aria-label='How much water was consumed each day weekly' class='daily-water-per-week'></span></p>
                 </div>
               </div>
             </label>
@@ -38,12 +42,19 @@
               <div class="card-inner-info">
                 <h2>Sleep</h2>
                 <div class="details">
-                  <h3>Latest Day hours slept: <span aria-label='How many hours slept today' class='hours-sleep'></span></h3>
-                  <h3>Latest Day quality sleep: <span aria-label='Quality of sleep today' class='quality-sleep'></span></h3>
-                  <h3>Sleep hours over the course of a week <span aria-label='Average hours of sleep weekly' class='sleep-hrs-weekly'></span></h3>
-                  <h3>Sleep quality over the course of a week <span aria-label='Average quality of sleep weekly' class='sleep-quality-weekly'></span></h3>
-                  <h3>All time average sleep hours for a user: <span aria-label='Average hours of sleep from all time' class='avg-sleep-hours'></span></h3>
-                  <h3>All time average sleep-quality for a user: <span aria-label='Average quality of sleep from all time' class='avg-sleep-qual'></span></h3>
+                  <h3>Hours slept today: </h3>
+                  <p><span aria-label='How many hours slept today' class='hours-sleep user-info'></span></p>
+                  <p>hrs</p>
+                  <h3>Quality sleep today: </h3>
+                  <p><span aria-label='Quality of sleep today' class='quality-sleep user-info'></span></p>
+                  <h3>Hours of sleep over a week: </h3>
+                  <p class='user-info-display'><span aria-label='Average hours of sleep weekly' class='sleep-hrs-weekly'></span></p>
+                  <h3>Sleep quality over a week: </h3>
+                  <p class='user-info-display'><span aria-label='Average quality of sleep weekly' class='sleep-quality-weekly'></span></p>
+                  <h3>All time average sleep hours: </h3>
+                  <p><span aria-label='Average hours of sleep from all time' class='avg-sleep-hours user-info'></span></p>
+                  <h3>All time average sleep-quality: </h3>
+                  <p><span aria-label='Average quality of sleep from all time' class='avg-sleep-qual user-info'></span></p>
                 </div>
               </div>
             </label>
@@ -53,10 +64,14 @@
               <div class="card-inner-info">
                 <h2>Activity</h2>
                 <div class="details">
-                  <h3>Avg Step Goal of All users: <span aria-label='average step goal for all users' class='avg-users-stepgoal'></span></h3>
-                  <h3>Number of steps for the latest day: <span class="steps-day"></span></h3>
-                  <h3>Number of minutes active in day: <span class="mins-active"></span></h3>
-                  <h3>Miles Walked in a day: <span class="miles-walked"></span></h3>
+                  <!-- <h3>Avg Step Goal of All users: </h3> -->
+                  <!-- <p><span aria-label='average step goal for all users' class='avg-users-stepgoal user-info'></span></p> -->
+                  <h3>Number of steps today: </h3>
+                  <p><span class="steps-day user-info"></span> / <span aria-label='average step goal for all users' class='avg-users-stepgoal user-info'></span></p>
+                  <h3>Number of minutes active today: </h3>
+                  <p><span class="mins-active user-info"></span></p>
+                  <h3>Miles Walked today: </h3>
+                  <p><span class="miles-walked user-info"></span></p>
                 </div>
               </div>
             </label>
