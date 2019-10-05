@@ -6,8 +6,8 @@ This project is a two week project at Turing School of Software & Design, and wa
 
 ## Created by:
 
-[Amanda Consuelo Sierra](https://github.com/Asilo5)
-[Kayla Lawson](https://github.com/KaylaLawson)
+- [Amanda Consuelo Sierra](https://github.com/Asilo5)
+- [Kayla Lawson](https://github.com/KaylaLawson)
 
 ## Setup
 
